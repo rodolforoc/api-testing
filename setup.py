@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='api-testing',
+setup(name='api-testing-framework',
       version='1.0',
       description="Practice API Testing",
       author='Rodolfo Caetano',
