@@ -52,3 +52,17 @@ class WooAPIUtility(object):
 
         return self.rs_json
 
+    def put(self, wc_endpoint, params=None, expected_status_code=200):
+        rs_api = self.wcapi.put(wc_endpoint, data=params)
+        self.status_code = rs_api.status_code
+        self.expected_status_code = expected_status_code
+        self.rs_json = rs_api.json()
+        self.endpoint = wc_endpoint
+        self.assert_status_code()
+
+        logger.debug(f"Woo API PUT response: {self.rs_json}")
+
+        return self.rs_json
+
+
+
