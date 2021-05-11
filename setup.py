@@ -6,5 +6,14 @@ setup(name='api-testing-framework',
       author='Rodolfo Caetano',
       author_email='rodolforoc97@gmail.com',
       url='',
-      packages=find_packages()
+      packages=find_packages(),
+      zip_safe=False,
+      install_requires=[
+            "pytest",
+            "pytest-html",
+            "requests",
+            "requests-oauthlib",
+            "PyMySQL",
+            "WooCommerce",
+      ]
       )
